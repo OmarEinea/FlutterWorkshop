@@ -1,4 +1,4 @@
-# flutter_workshop
+# Flutter Workshop
 
 A simple application used during an Intro to Flutter workshop.
 
