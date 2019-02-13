@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 
 main() {
+  var card = (text) => Card(
+      margin: EdgeInsets.fromLTRB(8, 4, 8, 4),
+      elevation: 2,
+      child: Padding(
+        padding: EdgeInsets.all(16),
+        child: Text(text, textScaleFactor: 1.2,),
+      )
+  );
+
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -8,17 +17,13 @@ main() {
         appBar: AppBar(
           title: Text('Flutter Workshop')
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        body: ListView(
+          // crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Card(
-              margin: EdgeInsets.all(8),
-              elevation: 2,
-              child: Padding(
-                padding: EdgeInsets.all(8),
-                child: Text('welcome'),
-              )
-            ),
+            card('hello'),
+            card('hi'),
+            card('hoi'),
+            card('hey')
           ]
         ),
       )
